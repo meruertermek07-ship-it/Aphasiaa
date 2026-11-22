@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Афазиясы бар адамдарға арналған логопедиялық түзету бағдарламасы">
+
+    <title>АФАЗИЯ | Логопедиялық кабинет</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ==================================
+     1. БАСТЫ БЕТ
+================================== -->
+
+<section id="homePage" class="home-page">
+
+    <div class="home-decoration"></div>
+
+    <div class="home-content">
+
+        <div class="home-line"></div>
+
+        <h1>АФАЗИЯ</h1>
+
+        <p class="home-subtitle">
+            ЛОГОПЕДИЯЛЫҚ ТҮЗЕТУ БАҒДАРЛАМАСЫ
+        </p>
+
+        <p class="home-description">
+            Сөйлеу қабілетін қалпына келтіру мен дамытуға
+            арналған арнайы түзету платформасы.
+        </p>
+
+        <button class="enter-button" onclick="enterSite()">
+
+            <span>КІРУ</span>
+
+            <span class="enter-arrow">→</span>
+
+        </button>
+
+        <div class="home-bottom">
+            СӨЙЛЕУ · ТҮСІНУ · ҚАРЫМ-ҚАТЫНАС
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================
+     2. НЕГІЗГІ КАБИНЕТ
+================================== -->
+
+<section id="mainPage" class="main-page hidden">
+
+
+    <!-- ЖОҒАРҒЫ БӨЛІК -->
+
+    <header class="header">
+
+        <div class="header-right">
+
+            <div class="header-symbol">
+                ✦
+            </div>
+
+            <div class="header-text">
+                <strong>ЛОГОПЕД КАБИНЕТІ</strong>
+                <span>Түзету және дамыту ортасы</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- НЕГІЗГІ МАЗМҰН -->
+
+    <main class="main-container">
+
+
+        <!-- ТАҚЫРЫП -->
+
+        <div class="main-heading">
+
+            <span class="heading-label">
+                ЛОГОПЕДИЯЛЫҚ ПЛАТФОРМА
+            </span>
+
+            <h1>АФАЗИЯ</h1>
+
+            <p>
+                Сөйлеу қабілетін қалпына келтіруге арналған
+                логопедиялық түзету бағдарламасы
+            </p>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <!-- БӨЛІМДЕР ТАҚЫРЫБЫ -->
+
+        <div class="menu-heading">
+
+            <div>
+                <span>ЖҰМЫС БАҒЫТТАРЫ</span>
+
+                <h2>Түзету бөлімдері</h2>
+            </div>
+
+            <div class="menu-count">
+                08 БӨЛІМ
+            </div>
+
+        </div>
+
+
+        <!-- СЕГІЗ БӨЛІМ -->
+
+        <div class="sections-grid">
+
+
+            <!-- 01 ТЫНЫС АЛУ -->
+
+            <button class="section-card"
+                    onclick="openSection('breathing')">
+
+                <span class="card-number">01</span>
+
+                <span class="card-icon">◉</span>
+
+                <span class="card-title">
+                    Тыныс алу
+                </span>
+
+                <span class="card-description">
+                    Сөйлеу тынысын дамыту
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 02 АРТИКУЛЯЦИЯ -->
+
+            <button class="section-card"
+                    onclick="openSection('articulation')">
+
+                <span class="card-number">02</span>
+
+                <span class="card-icon">◇</span>
+
+                <span class="card-title">
+                    Артикуляция
+                </span>
+
+                <span class="card-description">
+                    Артикуляциялық аппаратты дамыту
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 03 СӨЗДІК ҚОР -->
+
+            <button class="section-card"
+                    onclick="openSection('vocabulary')">
+
+                <span class="card-number">03</span>
+
+                <span class="card-icon">Aa</span>
+
+                <span class="card-title">
+                    Сөздік қор
+                </span>
+
+                <span class="card-description">
+                    Белсенді және енжар сөздік қор
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 04 СӨЙЛЕУДІ ТҮСІНУ -->
+
+            <button class="section-card"
+                    onclick="openSection('understanding')">
+
+                <span class="card-number">04</span>
+
+                <span class="card-icon">◎</span>
+
+                <span class="card-title">
+                    Сөйлеуді түсіну
+                </span>
+
+                <span class="card-description">
+                    Сөйлеуді қабылдау және түсіну
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 05 СӨЙЛЕУДІ ҚАЛЫПТАСТЫРУ -->
+
+            <button class="section-card"
+                    onclick="openSection('speech')">
+
+                <span class="card-number">05</span>
+
+                <span class="card-icon">◈</span>
+
+                <span class="card-title">
+                    Сөйлеуді қалыптастыру
+                </span>
+
+                <span class="card-description">
+                    Сөз және сөйлем құрастыру
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 06 ОҚУ ЖӘНЕ ЖАЗУ -->
+
+            <button class="section-card"
+                    onclick="openSection('reading')">
+
+                <span class="card-number">06</span>
+
+                <span class="card-icon">▤</span>
+
+                <span class="card-title">
+                    Оқу және жазу
+                </span>
+
+                <span class="card-description">
+                    Оқу және жазу дағдылары
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 07 ЛОГОРИТМИКА -->
+
+            <button class="section-card"
+                    onclick="openSection('logorhythmics')">
+
+                <span class="card-number">07</span>
+
+                <span class="card-icon">♫</span>
+
+                <span class="card-title">
+                    Логоритмика
+                </span>
+
+                <span class="card-description">
+                    Қозғалыс, ырғақ және сөйлеу
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+            <!-- 08 НӘТИЖЕЛЕР -->
+
+            <button class="section-card"
+                    onclick="openSection('results')">
+
+                <span class="card-number">08</span>
+
+                <span class="card-icon">▥</span>
+
+                <span class="card-title">
+                    Нәтижелер
+                </span>
+
+                <span class="card-description">
+                    Орындалған тапсырмаларды бақылау
+                </span>
+
+                <span class="card-arrow">→</span>
+
+            </button>
+
+
+        </div>
+
+
+        <!-- ТӨМЕНГІ АҚПАРАТ -->
+
+        <footer class="main-footer">
+
+            <span>
+                АФАЗИЯ — ЛОГОПЕДИЯЛЫҚ ТҮЗЕТУ ПЛАТФОРМАСЫ
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+</section>
+
+
+<!-- ==================================
+     3. ЖЕКЕ БӨЛІМДІ АШУ
+================================== -->
+
+<section id="sectionPage" class="section-page hidden">
+
+
+    <header class="header">
+
+        <div class="header-right">
+
+            <div class="header-symbol">
+                ✦
+            </div>
+
+            <div class="header-text">
+                <strong>ЛОГОПЕД КАБИНЕТІ</strong>
+                <span>Түзету және дамыту ортасы</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="section-container">
+
+        <button class="back-button" onclick="backToMenu()">
+            ← Бөлімдерге оралу
+        </button>
+
+
+        <div class="section-heading">
+
+            <span class="heading-label" id="sectionNumber">
+                01 БӨЛІМ
+            </span>
+
+            <h1 id="selectedTitle">
+                Тыныс алу
+            </h1>
+
+            <p id="selectedDescription">
+                Сөйлеу тынысын дамыту.
+            </p>
+
+        </div>
+
+
+        <div class="section-information">
+
+            <div class="information-icon">
+                ◇
+            </div>
+
+            <h2>Бөлім мазмұны</h2>
+
+            <p id="sectionInformation">
+                Бұл бөлімде логопедиялық ақпараттар,
+                жаттығулар және интерактивті тапсырмалар
+                орналастырылады.
+            </p>
+
+        </div>
+
+
+        <div id="taskContent"></div>
+
+
+        <footer class="main-footer">
+
+            <span>АФАЗИЯ — ЛОГОПЕДИЯЛЫҚ ПЛАТФОРМА</span>
+
+            <span>© 2026</span>
+
+        </footer>
+
+    </main>
+
+</section>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
