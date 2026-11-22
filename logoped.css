@@ -1,0 +1,448 @@
+@import url(‘https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap’);
+
+:root {
+–navy: #19364d;
+–blue: #527d9b;
+–light-blue: #edf4f8;
+–gold: #b99768;
+–white: #ffffff;
+–background: #f4f7fa;
+–text: #273b4b;
+–muted: #778694;
+–border: #e3eaf0;
+–green: #4b9b79;
+–shadow: 0 12px 35px rgba(31, 57, 77, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+background: var(–background);
+color: var(–text);
+line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+font: inherit;
+}
+
+/* Жоғарғы мәзір */
+
+.top-header {
+min-height: 76px;
+background: var(–white);
+border-bottom: 1px solid var(–border);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px 7%;
+}
+
+.back-link {
+text-decoration: none;
+color: var(–blue);
+font-weight: 700;
+font-size: 14px;
+transition: 0.3s;
+}
+
+.back-link:hover {
+color: var(–navy);
+}
+
+.header-title {
+color: var(–navy);
+font-family: ‘Manrope’, sans-serif;
+font-size: 22px;
+font-weight: 800;
+letter-spacing: 3px;
+}
+
+.header-label {
+color: var(–muted);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.5px;
+}
+
+/* Негізгі контейнер */
+
+.container {
+width: min(1100px, 90%);
+margin: 45px auto 80px;
+}
+
+/* Басты ақпарат */
+
+.intro {
+background: linear-gradient(120deg, #19364d, #315b77);
+color: white;
+padding: 55px;
+border-radius: 22px;
+position: relative;
+overflow: hidden;
+box-shadow: var(–shadow);
+}
+
+.intro::after {
+content: “”;
+position: absolute;
+width: 260px;
+height: 260px;
+border: 1px solid rgba(255,255,255,0.13);
+border-radius: 50%;
+right: -70px;
+top: -90px;
+box-shadow: 0 0 0 30px rgba(255,255,255,0.025),
+0 0 0 65px rgba(255,255,255,0.025);
+}
+
+.eyebrow {
+font-size: 11px;
+letter-spacing: 2px;
+color: #d9c39f;
+font-weight: 700;
+}
+
+.intro h1 {
+font-family: ‘Manrope’, sans-serif;
+font-size: clamp(32px, 5vw, 46px);
+margin: 15px 0 8px;
+position: relative;
+z-index: 1;
+}
+
+.intro > p {
+font-size: 17px;
+color: #e0eaf0;
+margin-bottom: 25px;
+position: relative;
+z-index: 1;
+}
+
+.intro-note {
+max-width: 760px;
+padding: 17px 20px;
+background: rgba(255,255,255,0.10);
+border-left: 3px solid var(–gold);
+border-radius: 5px;
+color: #f2f5f7;
+font-size: 14px;
+position: relative;
+z-index: 1;
+}
+
+/* Сөйлеу картасы */
+
+.card-section {
+background: white;
+border: 1px solid var(–border);
+border-radius: 20px;
+padding: 35px;
+margin-top: 30px;
+box-shadow: var(–shadow);
+}
+
+.card-section > h2 {
+color: var(–navy);
+font-family: ‘Manrope’, sans-serif;
+font-size: 25px;
+margin-bottom: 7px;
+}
+
+.card-section > p {
+color: var(–muted);
+font-size: 14px;
+margin-bottom: 25px;
+}
+
+/* Форма элементтері */
+
+.form-group {
+margin-bottom: 22px;
+}
+
+.form-group label {
+display: block;
+font-size: 14px;
+font-weight: 700;
+color: var(–navy);
+margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+width: 100%;
+padding: 13px 15px;
+border: 1px solid var(–border);
+border-radius: 9px;
+background: #fbfcfd;
+outline: none;
+color: var(–text);
+transition: 0.25s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+border-color: var(–blue);
+box-shadow: 0 0 0 3px rgba(82,125,155,0.10);
+}
+
+.form-group textarea {
+min-height: 90px;
+resize: vertical;
+}
+
+/* Бөлім карточкалары */
+
+.form-section {
+border: 1px solid var(–border);
+border-radius: 14px;
+padding: 25px;
+margin: 25px 0;
+background: #fff;
+}
+
+.form-section h3 {
+color: var(–navy);
+font-family: ‘Manrope’, sans-serif;
+font-size: 18px;
+margin-bottom: 18px;
+}
+
+.section-description {
+color: var(–muted);
+font-size: 13px;
+margin: -10px 0 18px;
+}
+
+.subsection-title {
+color: var(–blue);
+font-size: 15px;
+margin: 22px 0 12px;
+padding-bottom: 8px;
+border-bottom: 1px solid var(–border);
+}
+
+/* Бағалау кестесі */
+
+.task-list {
+width: 100%;
+border-collapse: collapse;
+margin: 15px 0;
+}
+
+.task-list th,
+.task-list td {
+padding: 13px 10px;
+border-bottom: 1px solid var(–border);
+text-align: left;
+font-size: 13px;
+}
+
+.task-list th {
+background: var(–light-blue);
+color: var(–navy);
+font-weight: 700;
+}
+
+.task-list td:last-child {
+width: 150px;
+}
+
+.score-select {
+width: 100%;
+padding: 9px;
+border: 1px solid var(–border);
+border-radius: 7px;
+background: #fff;
+color: var(–navy);
+outline: none;
+}
+
+/* Белгілеу */
+
+.check-group {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin: 12px 0;
+}
+
+.check-group label {
+display: flex;
+align-items: center;
+gap: 7px;
+font-size: 13px;
+cursor: pointer;
+}
+
+.check-group input {
+accent-color: var(–blue);
+width: 16px;
+height: 16px;
+}
+
+/* Батырмалар */
+
+.action-area {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px;
+margin: 35px 0;
+}
+
+.action-area button {
+border: none;
+padding: 15px 28px;
+border-radius: 9px;
+font-weight: 700;
+font-size: 13px;
+letter-spacing: 0.5px;
+cursor: pointer;
+transition: 0.25s;
+}
+
+#saveButton {
+background: white;
+color: var(–navy);
+border: 1px solid var(–border);
+}
+
+#resultButton {
+background: var(–navy);
+color: white;
+}
+
+.action-area button:hover {
+transform: translateY(-2px);
+box-shadow: var(–shadow);
+}
+
+/* Нәтиже */
+
+.result-section {
+background: white;
+border-radius: 20px;
+padding: 35px;
+margin-top: 30px;
+box-shadow: var(–shadow);
+}
+
+.result-section h2 {
+font-family: ‘Manrope’, sans-serif;
+color: var(–navy);
+margin-bottom: 20px;
+}
+
+.result-card {
+background: var(–light-blue);
+border-radius: 12px;
+padding: 20px;
+margin: 12px 0;
+}
+
+.progress-track {
+height: 9px;
+background: #e0e8ed;
+border-radius: 20px;
+overflow: hidden;
+margin-top: 10px;
+}
+
+.progress-fill {
+height: 100%;
+background: var(–green);
+border-radius: 20px;
+transition: width 0.5s ease;
+}
+
+.result-number {
+font-size: 27px;
+font-weight: 800;
+color: var(–navy);
+}
+
+.result-description {
+font-size: 13px;
+color: var(–muted);
+}
+
+/* Төменгі бөлік */
+
+@media (max-width: 700px) {
+.top-header {
+padding: 14px 5%;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.header-title {
+    font-size: 18px;
+}
+.header-label {
+    font-size: 9px;
+}
+.container {
+    width: 94%;
+    margin-top: 22px;
+}
+.intro {
+    padding: 30px 23px;
+}
+.card-section,
+.result-section {
+    padding: 20px 15px;
+}
+.form-section {
+    padding: 17px 12px;
+}
+.task-list th,
+.task-list td {
+    padding: 10px 6px;
+    font-size: 11px;
+}
+.task-list td:last-child {
+    width: 90px;
+}
+.action-area {
+    flex-direction: column;
+}
+.action-area button {
+    width: 100%;
+}
+
+}
+
+@media print {
+.top-header,
+.action-area,
+.back-link {
+display: none;
+}
+
+body {
+    background: white;
+}
+.container {
+    width: 100%;
+    margin: 0;
+}
+.intro,
+.card-section,
+.result-section {
+    box-shadow: none;
+}
+
+}
