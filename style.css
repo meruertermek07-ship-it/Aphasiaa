@@ -1,6 +1,23 @@
-/* ==================================
-   1. НЕГІЗГІ СТИЛЬ
-================================== */
+/* =========================================
+   APHASIA — PREMIUM DESIGN
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #142f46;
+    --navy-light: #214966;
+    --blue: #527c99;
+    --gold: #bd9b66;
+
+    --white: #ffffff;
+    --background: #f3f6f9;
+    --text: #263d50;
+    --muted: #8799a8;
+
+    --border: #e5ebf0;
+    --shadow: 0 12px 35px rgba(25, 53, 79, 0.07);
+}
 
 * {
     margin: 0;
@@ -8,22 +25,14 @@
     box-sizing: border-box;
 }
 
-:root {
-    --navy: #19354f;
-    --blue: #315d7d;
-    --light-blue: #eaf2f7;
-    --white: #ffffff;
-    --background: #f5f8fb;
-    --text: #26394a;
-    --muted: #8193a2;
-    --border: #e5ebf0;
-    --gold: #c5a36b;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    background: var(--background);
+    font-family: 'DM Sans', sans-serif;
     color: var(--text);
+    background: var(--background);
     min-height: 100vh;
 }
 
@@ -38,46 +47,67 @@ button {
 }
 
 
-/* ==================================
-   2. БАСТЫ БЕТ
-================================== */
+/* =========================================
+   1. HOME PAGE
+========================================= */
 
 .home-page {
     min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     position: relative;
     overflow: hidden;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(116, 158, 185, 0.2),
-            transparent 35%
-        ),
         linear-gradient(
-            135deg,
-            #142c43,
-            #244c6a,
-            #19354f
+            125deg,
+            #112b40 0%,
+            #1b405b 55%,
+            #244d68 100%
         );
+}
+
+.home-page::before {
+    content: "";
+    position: absolute;
+
+    width: 750px;
+    height: 750px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 50%;
+
+    top: -430px;
+    left: -180px;
+}
+
+.home-page::after {
+    content: "";
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 50%;
+
+    bottom: -420px;
+    right: -150px;
 }
 
 .home-decoration {
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 
-    border: 1px solid rgba(255,255,255,0.12);
-
+    background: rgba(255,255,255,0.025);
     border-radius: 50%;
 
-    right: -180px;
-    bottom: -300px;
+    top: 30%;
+    right: 12%;
 }
 
 .home-content {
@@ -86,149 +116,165 @@ button {
 
     text-align: center;
 
-    max-width: 750px;
-    padding: 30px;
+    max-width: 800px;
+    padding: 35px;
 
-    animation: fadeIn 0.9s ease;
+    animation: entrance 1s ease;
 }
 
 .home-line {
-    width: 55px;
+    width: 65px;
     height: 3px;
 
     background: var(--gold);
 
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
 }
 
 .home-content h1 {
+    font-family: 'Manrope', sans-serif;
+
     color: white;
 
-    font-size: clamp(55px, 10vw, 105px);
+    font-size: clamp(65px, 11vw, 115px);
     font-weight: 800;
 
-    letter-spacing: 15px;
+    letter-spacing: 17px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .home-subtitle {
-    color: #d9e5ed;
+    color: #d5e2eb;
 
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
 
-    margin-bottom: 25px;
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
 }
 
 .home-description {
     color: #b9cbd8;
 
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 2;
 
-    max-width: 520px;
-    margin: 0 auto 45px;
+    max-width: 550px;
+
+    margin: 0 auto 48px;
 }
 
 .enter-button {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    gap: 35px;
+    gap: 45px;
 
-    min-width: 210px;
+    min-width: 220px;
 
-    padding: 19px 35px;
+    padding: 20px 35px;
 
-    background: white;
+    background: #ffffff;
     color: var(--navy);
 
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
 
     letter-spacing: 3px;
 
-    border-radius: 5px;
+    border-radius: 7px;
 
-    transition: 0.3s;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+
+    transition: 0.35s;
 }
 
 .enter-button:hover {
     background: var(--gold);
     color: white;
-    transform: translateY(-4px);
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.2);
 }
 
 .enter-arrow {
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .home-bottom {
-    color: #aabfce;
+    color: #a9bfce;
 
-    font-size: 10px;
+    font-size: 9px;
+    font-weight: 600;
+
     letter-spacing: 3px;
 
-    margin-top: 65px;
+    margin-top: 70px;
 }
 
 
-/* ==================================
-   3. HEADER
-================================== */
+/* =========================================
+   2. HEADER
+========================================= */
 
 .header {
-    height: 82px;
+    height: 88px;
+
     width: 100%;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    padding: 0 7%;
+    padding: 0 8%;
 
-    background: white;
+    background: rgba(255,255,255,0.96);
 
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #e9eef2;
 
-    box-shadow: 0 3px 15px rgba(30,60,85,0.03);
+    box-shadow: 0 5px 25px rgba(20,47,70,0.035);
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .header-symbol {
-    width: 38px;
-    height: 38px;
+    width: 43px;
+    height: 43px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
+    background: #edf3f7;
 
-    background: var(--light-blue);
-    color: var(--blue);
+    border-radius: 12px;
 
-    font-size: 19px;
+    color: var(--gold);
+
+    font-size: 21px;
 }
 
 .header-text {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
 }
 
 .header-text strong {
     color: var(--navy);
 
     font-size: 12px;
-    letter-spacing: 1.2px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
 }
 
 .header-text span {
@@ -237,65 +283,76 @@ button {
 }
 
 
-/* ==================================
-   4. НЕГІЗГІ БЕТ
-================================== */
+/* =========================================
+   3. MAIN PAGE
+========================================= */
 
 .main-page {
     min-height: 100vh;
 
     background:
-        linear-gradient(
-            180deg,
-            #f9fbfd,
-            #edf3f8
-        );
+        radial-gradient(
+            ellipse at 50% 0%,
+            #ffffff 0%,
+            transparent 65%
+        ),
+        #f2f6f9;
 }
 
 .main-container {
-    width: 100%;
-    max-width: 1150px;
+    max-width: 1180px;
 
-    margin: 0 auto;
+    margin: auto;
 
-    padding: 65px 30px 35px;
+    padding: 75px 35px 40px;
 }
 
 
-/* ==================================
-   5. БАСТЫ ТАҚЫРЫП
-================================== */
+/* =========================================
+   4. MAIN HEADING
+========================================= */
 
 .main-heading {
     text-align: center;
-    margin-bottom: 55px;
+
+    margin-bottom: 65px;
 }
 
 .heading-label {
+    display: inline-block;
+
     color: var(--gold);
 
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 10px;
+    font-weight: 800;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
 }
 
 .main-heading h1 {
+    font-family: 'Manrope', sans-serif;
+
     color: var(--navy);
 
-    font-size: 52px;
+    font-size: 58px;
     font-weight: 800;
 
-    letter-spacing: 7px;
+    letter-spacing: 9px;
 
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
 .main-heading p {
+    max-width: 580px;
+
+    margin: auto;
+
     color: var(--muted);
 
     font-size: 14px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .heading-line {
@@ -308,14 +365,14 @@ button {
 }
 
 
-/* ==================================
-   6. БӨЛІМ ТАҚЫРЫБЫ
-================================== */
+/* =========================================
+   5. SECTION HEADING
+========================================= */
 
 .menu-heading {
-    max-width: 950px;
+    max-width: 1000px;
 
-    margin: 0 auto 22px;
+    margin: 0 auto 25px;
 
     display: flex;
     justify-content: space-between;
@@ -326,40 +383,45 @@ button {
     color: var(--gold);
 
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 }
 
 .menu-heading h2 {
+    font-family: 'Manrope', sans-serif;
+
     color: var(--navy);
 
-    font-size: 22px;
+    font-size: 25px;
+    font-weight: 800;
 
-    margin-top: 8px;
+    margin-top: 9px;
 }
 
 .menu-count {
+    padding: 12px 20px;
+
     background: white;
 
     border: 1px solid var(--border);
-    border-radius: 5px;
-
-    padding: 12px 17px;
+    border-radius: 7px;
 
     color: var(--blue) !important;
 
-    font-size: 11px !important;
+    font-size: 10px !important;
+    font-weight: 800;
+
     letter-spacing: 1px;
 }
 
 
-/* ==================================
-   7. СЕГІЗ КАРТОЧКА
-================================== */
+/* =========================================
+   6. GRID
+========================================= */
 
 .sections-grid {
-    max-width: 950px;
+    max-width: 1000px;
 
     margin: 0 auto;
 
@@ -367,15 +429,20 @@ button {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 22px;
 }
+
+
+/* =========================================
+   7. SECTION CARDS
+========================================= */
 
 .section-card {
     position: relative;
 
-    min-height: 155px;
+    min-height: 175px;
 
-    padding: 24px 28px;
+    padding: 27px 30px;
 
     display: flex;
     flex-direction: column;
@@ -387,51 +454,90 @@ button {
 
     background: white;
 
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border: 1px solid #e7edf2;
 
-    box-shadow: 0 5px 20px rgba(35,65,90,0.04);
+    border-radius: 13px;
 
-    transition: 0.3s;
+    box-shadow:
+        0 5px 20px rgba(25,53,79,0.035);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Сол жақ декоративті сызық */
+
+.section-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 0;
+
+    background: var(--gold);
+
+    transition: height 0.35s ease;
+}
+
+.section-card:hover::before {
+    height: 100%;
 }
 
 .section-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
 
-    border-color: #a9c0d0;
+    border-color: #d3dfe8;
 
-    box-shadow: 0 12px 30px rgba(35,65,90,0.1);
+    box-shadow:
+        0 18px 40px rgba(25,53,79,0.10);
 }
+
+
+/* Нөмір */
 
 .card-number {
     position: absolute;
 
-    top: 17px;
-    right: 20px;
+    top: 22px;
+    right: 25px;
 
-    color: #b7c5d0;
+    color: #bdcbd5;
 
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 800;
+
+    letter-spacing: 1px;
 }
 
+
+/* Белгіше */
+
 .card-icon {
-    width: 39px;
-    height: 39px;
+    width: 46px;
+    height: 46px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    background: var(--light-blue);
+    background: #edf3f7;
+
     color: var(--blue);
 
-    border-radius: 8px;
+    border-radius: 11px;
 
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
 
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 
     transition: 0.3s;
 }
@@ -439,114 +545,144 @@ button {
 .section-card:hover .card-icon {
     background: var(--navy);
     color: white;
+
+    transform: scale(1.06);
 }
+
+
+/* Атауы */
 
 .card-title {
     color: var(--navy);
 
-    font-size: 15px;
-    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
 
-    margin-bottom: 7px;
+    font-size: 16px;
+    font-weight: 800;
+
+    margin-bottom: 8px;
 }
+
+
+/* Сипаттамасы */
 
 .card-description {
-    color: var(--muted);
+    color: #8b9ba8;
 
     font-size: 11px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
+
+
+/* Көрсеткі */
 
 .card-arrow {
     position: absolute;
 
-    right: 23px;
-    bottom: 22px;
+    right: 25px;
+    bottom: 24px;
 
-    color: #9aafbd;
+    color: #a8b8c4;
 
-    font-size: 20px;
+    font-size: 21px;
 
     transition: 0.3s;
 }
 
 .section-card:hover .card-arrow {
-    color: var(--blue);
-    transform: translateX(5px);
+    color: var(--gold);
+    transform: translateX(6px);
 }
 
 
-/* ==================================
-   8. ТӨМЕНГІ АҚПАРАТ
-================================== */
+/* =========================================
+   8. FOOTER
+========================================= */
 
 .main-footer {
-    max-width: 950px;
+    max-width: 1000px;
 
-    margin: 55px auto 0;
-    padding-top: 20px;
+    margin: 65px auto 0;
+
+    padding-top: 22px;
 
     display: flex;
     justify-content: space-between;
-    gap: 15px;
 
-    border-top: 1px solid var(--border);
+    border-top: 1px solid #e2e9ef;
 
-    color: var(--muted);
+    color: #9aaab5;
 
     font-size: 9px;
-    letter-spacing: 1px;
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
 }
 
 
-/* ==================================
-   9. ЖЕКЕ БӨЛІМ БЕТІ
-================================== */
+/* =========================================
+   9. SECTION PAGE
+========================================= */
 
 .section-page {
     min-height: 100vh;
-    background: var(--background);
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            white,
+            transparent 70%
+        ),
+        #f2f6f9;
 }
 
 .section-container {
-    max-width: 1050px;
+    max-width: 1100px;
 
-    margin: 0 auto;
+    margin: auto;
 
-    padding: 50px 30px;
+    padding: 55px 35px;
 }
 
 .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 22px;
+
     background: white;
 
     color: var(--navy);
 
     border: 1px solid var(--border);
-    border-radius: 6px;
-
-    padding: 13px 20px;
+    border-radius: 7px;
 
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
+
+    margin-bottom: 50px;
 
     transition: 0.3s;
-
-    margin-bottom: 45px;
 }
 
 .back-button:hover {
     background: var(--navy);
     color: white;
+
+    transform: translateX(-3px);
 }
 
 .section-heading {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .section-heading h1 {
+    font-family: 'Manrope', sans-serif;
+
     color: var(--navy);
 
-    font-size: 38px;
+    font-size: 42px;
     font-weight: 800;
 
     margin: 15px 0;
@@ -560,64 +696,69 @@ button {
 }
 
 
-/* ==================================
-   10. АҚПАРАТ КАРТОЧКАСЫ
-================================== */
+/* =========================================
+   10. INFORMATION CARD
+========================================= */
 
 .section-information {
     background: white;
 
     border: 1px solid var(--border);
-    border-radius: 10px;
 
-    padding: 35px;
+    border-radius: 13px;
 
-    box-shadow: 0 5px 20px rgba(35,65,90,0.04);
+    padding: 40px;
+
+    box-shadow: var(--shadow);
 }
 
 .information-icon {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     background: var(--light-blue);
+
     color: var(--blue);
 
-    border-radius: 8px;
+    border-radius: 11px;
 
     font-size: 23px;
 
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 
 .section-information h2 {
+    font-family: 'Manrope', sans-serif;
+
     color: var(--navy);
 
-    font-size: 21px;
+    font-size: 22px;
+    font-weight: 800;
 
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .section-information p {
     color: var(--muted);
 
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 2;
 }
 
 
-/* ==================================
-   11. АНИМАЦИЯ
-================================== */
+/* =========================================
+   11. ANIMATION
+========================================= */
 
-@keyframes fadeIn {
+@keyframes entrance {
 
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
 
     to {
@@ -628,39 +769,39 @@ button {
 }
 
 
-/* ==================================
-   12. ПЛАНШЕТКЕ БЕЙІМДЕУ
-================================== */
+/* =========================================
+   12. TABLET
+========================================= */
 
 @media (max-width: 768px) {
 
     .main-container {
-        padding: 50px 22px 30px;
+        padding: 55px 22px 35px;
+    }
+
+    .main-heading {
+        margin-bottom: 50px;
     }
 
     .sections-grid {
-        gap: 14px;
+        gap: 16px;
     }
 
     .section-card {
-        min-height: 145px;
-        padding: 20px;
-    }
-
-    .card-title {
-        font-size: 14px;
+        min-height: 155px;
+        padding: 23px;
     }
 
     .header {
-        padding: 0 22px;
+        padding: 0 25px;
     }
 
 }
 
 
-/* ==================================
-   13. ТЕЛЕФОНҒА БЕЙІМДЕУ
-================================== */
+/* =========================================
+   13. MOBILE
+========================================= */
 
 @media (max-width: 520px) {
 
@@ -670,7 +811,7 @@ button {
     }
 
     .home-subtitle {
-        font-size: 10px;
+        font-size: 9px;
         letter-spacing: 2px;
     }
 
@@ -680,23 +821,20 @@ button {
 
     .home-bottom {
         font-size: 8px;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
     }
 
     .header {
-        height: 72px;
+        height: 75px;
+        padding: 0 18px;
     }
 
     .main-container {
-        padding: 40px 16px 25px;
-    }
-
-    .main-heading {
-        margin-bottom: 40px;
+        padding: 40px 17px 25px;
     }
 
     .main-heading h1 {
-        font-size: 39px;
+        font-size: 40px;
     }
 
     .main-heading p {
@@ -704,29 +842,26 @@ button {
     }
 
     .menu-heading h2 {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .sections-grid {
         grid-template-columns: 1fr;
-        gap: 13px;
+        gap: 14px;
     }
 
     .section-card {
-        min-height: 130px;
-        padding: 20px;
+        min-height: 140px;
+        padding: 22px;
     }
 
     .card-title {
         font-size: 15px;
     }
 
-    .card-description {
-        font-size: 11px;
-    }
-
     .main-footer {
         flex-direction: column;
+        gap: 10px;
         font-size: 8px;
     }
 
@@ -735,7 +870,7 @@ button {
     }
 
     .section-heading h1 {
-        font-size: 30px;
+        font-size: 31px;
     }
 
     .section-information {
@@ -745,9 +880,14 @@ button {
 }
 
 
-/* ==================================
-   14. ҚОЗҒАЛЫСТЫ АЗАЙТУ
-================================== */
+/* =========================================
+   14. ACCESSIBILITY
+========================================= */
+
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
 
 @media (prefers-reduced-motion: reduce) {
 
