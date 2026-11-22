@@ -1,6 +1,6 @@
-/* =====================================
-   1. НЕГІЗГІ БАПТАУЛАР
-===================================== */
+/* ==================================
+   1. НЕГІЗГІ СТИЛЬ
+================================== */
 
 * {
     margin: 0;
@@ -15,13 +15,9 @@
     --white: #ffffff;
     --background: #f5f8fb;
     --text: #26394a;
-    --muted: #8293a2;
+    --muted: #8193a2;
     --border: #e5ebf0;
-    --gold: #c4a36b;
-}
-
-html {
-    scroll-behavior: smooth;
+    --gold: #c5a36b;
 }
 
 body {
@@ -42,28 +38,25 @@ button {
 }
 
 
-/* =====================================
+/* ==================================
    2. БАСТЫ БЕТ
-===================================== */
+================================== */
 
 .home-page {
     min-height: 100vh;
+
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     position: relative;
     overflow: hidden;
 
     background:
         radial-gradient(
             circle at 15% 20%,
-            rgba(104, 150, 180, 0.18),
+            rgba(116, 158, 185, 0.2),
             transparent 35%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(196, 163, 107, 0.12),
-            transparent 30%
         ),
         linear-gradient(
             135deg,
@@ -73,114 +66,131 @@ button {
         );
 }
 
-.home-page::before {
-    content: "";
+.home-decoration {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 50%;
-    top: -250px;
-    right: -100px;
-}
 
-.home-page::after {
-    content: "";
-    position: absolute;
-    width: 650px;
-    height: 650px;
-    border: 1px solid rgba(255,255,255,0.08);
+    width: 600px;
+    height: 600px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
     border-radius: 50%;
-    bottom: -400px;
-    left: -200px;
+
+    right: -180px;
+    bottom: -300px;
 }
 
 .home-content {
     position: relative;
     z-index: 2;
+
     text-align: center;
-    padding: 40px 20px;
-    animation: appear 1s ease;
+
+    max-width: 750px;
+    padding: 30px;
+
+    animation: fadeIn 0.9s ease;
+}
+
+.home-line {
+    width: 55px;
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: 0 auto 30px;
 }
 
 .home-content h1 {
+    color: white;
+
     font-size: clamp(55px, 10vw, 105px);
     font-weight: 800;
+
     letter-spacing: 15px;
-    color: white;
+
     margin-bottom: 20px;
 }
 
-.home-content p {
-    color: #d2e0eb;
-    font-size: 17px;
-    letter-spacing: 2px;
-    margin-bottom: 55px;
-    font-weight: 400;
+.home-subtitle {
+    color: #d9e5ed;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.home-description {
+    color: #b9cbd8;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    max-width: 520px;
+    margin: 0 auto 45px;
 }
 
 .enter-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 35px;
 
-    padding: 19px 45px;
-    min-width: 200px;
+    min-width: 210px;
+
+    padding: 19px 35px;
 
     background: white;
     color: var(--navy);
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
+
     letter-spacing: 3px;
 
-    border-radius: 6px;
-    transition: 0.3s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
+    border-radius: 5px;
 
-.enter-button span {
-    font-size: 22px;
+    transition: 0.3s;
 }
 
 .enter-button:hover {
     background: var(--gold);
     color: white;
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.enter-arrow {
+    font-size: 22px;
+}
+
+.home-bottom {
+    color: #aabfce;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-top: 65px;
 }
 
 
-/* =====================================
-   3. ЕКІНШІ БЕТ
-===================================== */
-
-.main-page {
-    min-height: 100vh;
-    background:
-        linear-gradient(
-            180deg,
-            #f7f9fc 0%,
-            #edf3f8 100%
-        );
-}
-
-
-/* =====================================
-   4. ЖОҒАРҒЫ HEADER
-===================================== */
+/* ==================================
+   3. HEADER
+================================== */
 
 .header {
+    height: 82px;
     width: 100%;
-    height: 85px;
-    background: white;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
     padding: 0 7%;
+
+    background: white;
+
     border-bottom: 1px solid var(--border);
 
     box-shadow: 0 3px 15px rgba(30,60,85,0.03);
@@ -189,103 +199,183 @@ button {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 13px;
-
-    color: var(--navy);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    gap: 12px;
 }
 
-.header-icon {
-    width: 37px;
-    height: 37px;
-
-    background: var(--light-blue);
-    color: var(--blue);
-
-    border-radius: 50%;
+.header-symbol {
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    border-radius: 50%;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    font-size: 19px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header-text strong {
+    color: var(--navy);
+
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+
+.header-text span {
+    color: var(--muted);
+    font-size: 10px;
 }
 
 
-/* =====================================
-   5. НЕГІЗГІ КОНТЕЙНЕР
-===================================== */
+/* ==================================
+   4. НЕГІЗГІ БЕТ
+================================== */
+
+.main-page {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f9fbfd,
+            #edf3f8
+        );
+}
 
 .main-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1150px;
 
     margin: 0 auto;
-    padding: 65px 35px 80px;
+
+    padding: 65px 30px 35px;
 }
 
 
-/* =====================================
-   6. БАСТЫ ТАҚЫРЫП
-===================================== */
+/* ==================================
+   5. БАСТЫ ТАҚЫРЫП
+================================== */
 
 .main-heading {
     text-align: center;
     margin-bottom: 55px;
 }
 
+.heading-label {
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
 .main-heading h1 {
     color: var(--navy);
 
-    font-size: clamp(35px, 5vw, 48px);
+    font-size: 52px;
     font-weight: 800;
 
-    letter-spacing: 5px;
-    margin-bottom: 15px;
+    letter-spacing: 7px;
+
+    margin: 15px 0;
 }
 
 .main-heading p {
     color: var(--muted);
 
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.8;
+}
 
-    max-width: 600px;
-    margin: auto;
+.heading-line {
+    width: 55px;
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: 25px auto 0;
 }
 
 
-/* =====================================
-   7. СЕГІЗ БАТЫРМА
-===================================== */
+/* ==================================
+   6. БӨЛІМ ТАҚЫРЫБЫ
+================================== */
+
+.menu-heading {
+    max-width: 950px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-heading span {
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.menu-heading h2 {
+    color: var(--navy);
+
+    font-size: 22px;
+
+    margin-top: 8px;
+}
+
+.menu-count {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    padding: 12px 17px;
+
+    color: var(--blue) !important;
+
+    font-size: 11px !important;
+    letter-spacing: 1px;
+}
+
+
+/* ==================================
+   7. СЕГІЗ КАРТОЧКА
+================================== */
 
 .sections-grid {
+    max-width: 950px;
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 22px;
-
-    max-width: 950px;
-    margin: 0 auto;
+    gap: 20px;
 }
-
-
-/* =====================================
-   8. КАРТОЧКА ДИЗАЙНЫ
-===================================== */
 
 .section-card {
     position: relative;
 
-    min-height: 145px;
+    min-height: 155px;
 
-    background: white;
-
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    padding: 24px 28px;
 
     display: flex;
     flex-direction: column;
@@ -293,99 +383,91 @@ button {
     align-items: flex-start;
     justify-content: center;
 
-    padding: 25px 30px;
-
-    overflow: hidden;
-
     text-align: left;
 
-    transition: all 0.3s ease;
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
 
     box-shadow: 0 5px 20px rgba(35,65,90,0.04);
+
+    transition: 0.3s;
 }
 
+.section-card:hover {
+    transform: translateY(-5px);
 
-/* Карточка нөмірі */
+    border-color: #a9c0d0;
+
+    box-shadow: 0 12px 30px rgba(35,65,90,0.1);
+}
 
 .card-number {
     position: absolute;
 
     top: 17px;
-    right: 22px;
+    right: 20px;
+
+    color: #b7c5d0;
 
     font-size: 12px;
     font-weight: 700;
-
-    color: #b7c5d0;
-    letter-spacing: 1px;
 }
 
-
-/* Карточка белгішесі */
-
 .card-icon {
-    width: 40px;
-    height: 40px;
-
-    background: var(--light-blue);
-    color: var(--blue);
+    width: 39px;
+    height: 39px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 9px;
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 8px;
 
     font-size: 19px;
     font-weight: 700;
 
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
     transition: 0.3s;
-}
-
-
-/* Карточка атауы */
-
-.card-title {
-    color: var(--navy);
-
-    font-size: 16px;
-    font-weight: 700;
-
-    line-height: 1.5;
-}
-
-
-/* Оң жақ көрсеткі */
-
-.card-arrow {
-    position: absolute;
-
-    right: 25px;
-    bottom: 24px;
-
-    color: #a8b8c5;
-    font-size: 21px;
-
-    transition: 0.3s;
-}
-
-
-/* Hover эффект */
-
-.section-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #9db8cb;
-
-    box-shadow:
-        0 12px 30px rgba(35,65,90,0.10);
 }
 
 .section-card:hover .card-icon {
     background: var(--navy);
     color: white;
+}
+
+.card-title {
+    color: var(--navy);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.card-description {
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.card-arrow {
+    position: absolute;
+
+    right: 23px;
+    bottom: 22px;
+
+    color: #9aafbd;
+
+    font-size: 20px;
+
+    transition: 0.3s;
 }
 
 .section-card:hover .card-arrow {
@@ -394,9 +476,32 @@ button {
 }
 
 
-/* =====================================
-   9. БӨЛІМНІҢ ІШКІ БЕТІ
-===================================== */
+/* ==================================
+   8. ТӨМЕНГІ АҚПАРАТ
+================================== */
+
+.main-footer {
+    max-width: 950px;
+
+    margin: 55px auto 0;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* ==================================
+   9. ЖЕКЕ БӨЛІМ БЕТІ
+================================== */
 
 .section-page {
     min-height: 100vh;
@@ -404,10 +509,11 @@ button {
 }
 
 .section-container {
-    max-width: 1150px;
+    max-width: 1050px;
 
     margin: 0 auto;
-    padding: 55px 35px;
+
+    padding: 50px 30px;
 }
 
 .back-button {
@@ -418,14 +524,14 @@ button {
     border: 1px solid var(--border);
     border-radius: 6px;
 
-    padding: 13px 22px;
+    padding: 13px 20px;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 
     transition: 0.3s;
 
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .back-button:hover {
@@ -433,28 +539,85 @@ button {
     color: white;
 }
 
-.section-container h1 {
-    font-size: 36px;
-    color: var(--navy);
-    margin-bottom: 18px;
+.section-heading {
+    margin-bottom: 35px;
 }
 
-.section-container p {
+.section-heading h1 {
+    color: var(--navy);
+
+    font-size: 38px;
+    font-weight: 800;
+
+    margin: 15px 0;
+}
+
+.section-heading p {
     color: var(--muted);
-    font-size: 15px;
+
+    font-size: 14px;
     line-height: 1.8;
 }
 
 
-/* =====================================
-   10. АНИМАЦИЯ
-===================================== */
+/* ==================================
+   10. АҚПАРАТ КАРТОЧКАСЫ
+================================== */
 
-@keyframes appear {
+.section-information {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 20px rgba(35,65,90,0.04);
+}
+
+.information-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 8px;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+.section-information h2 {
+    color: var(--navy);
+
+    font-size: 21px;
+
+    margin-bottom: 14px;
+}
+
+.section-information p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==================================
+   11. АНИМАЦИЯ
+================================== */
+
+@keyframes fadeIn {
 
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(20px);
     }
 
     to {
@@ -465,31 +628,27 @@ button {
 }
 
 
-/* =====================================
-   11. ПЛАНШЕТ
-===================================== */
+/* ==================================
+   12. ПЛАНШЕТКЕ БЕЙІМДЕУ
+================================== */
 
 @media (max-width: 768px) {
 
     .main-container {
-        padding: 45px 22px 60px;
+        padding: 50px 22px 30px;
     }
 
     .sections-grid {
-        gap: 15px;
+        gap: 14px;
     }
 
     .section-card {
-        min-height: 135px;
+        min-height: 145px;
         padding: 20px;
     }
 
     .card-title {
         font-size: 14px;
-    }
-
-    .main-heading {
-        margin-bottom: 40px;
     }
 
     .header {
@@ -499,44 +658,53 @@ button {
 }
 
 
-/* =====================================
-   12. ТЕЛЕФОН
-===================================== */
+/* ==================================
+   13. ТЕЛЕФОНҒА БЕЙІМДЕУ
+================================== */
 
 @media (max-width: 520px) {
 
     .home-content h1 {
+        font-size: 55px;
         letter-spacing: 8px;
     }
 
-    .home-content p {
-        font-size: 13px;
-        line-height: 1.8;
+    .home-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 
-    .enter-button {
-        padding: 17px 35px;
+    .home-description {
+        font-size: 13px;
+    }
+
+    .home-bottom {
+        font-size: 8px;
+        letter-spacing: 1.5px;
     }
 
     .header {
-        height: 70px;
-    }
-
-    .header-right {
-        font-size: 11px;
-        letter-spacing: 1px;
+        height: 72px;
     }
 
     .main-container {
-        padding: 40px 15px 50px;
+        padding: 40px 16px 25px;
+    }
+
+    .main-heading {
+        margin-bottom: 40px;
     }
 
     .main-heading h1 {
-        font-size: 34px;
+        font-size: 39px;
     }
 
     .main-heading p {
-        font-size: 13px;
+        font-size: 12px;
+    }
+
+    .menu-heading h2 {
+        font-size: 19px;
     }
 
     .sections-grid {
@@ -545,43 +713,49 @@ button {
     }
 
     .section-card {
-        min-height: 115px;
-        padding: 20px 22px;
-    }
-
-    .card-icon {
-        width: 35px;
-        height: 35px;
-        margin-bottom: 10px;
+        min-height: 130px;
+        padding: 20px;
     }
 
     .card-title {
         font-size: 15px;
     }
 
-    .section-container {
-        padding: 35px 20px;
+    .card-description {
+        font-size: 11px;
     }
 
-    .section-container h1 {
-        font-size: 28px;
+    .main-footer {
+        flex-direction: column;
+        font-size: 8px;
+    }
+
+    .section-container {
+        padding: 35px 18px;
+    }
+
+    .section-heading h1 {
+        font-size: 30px;
+    }
+
+    .section-information {
+        padding: 25px;
     }
 
 }
 
 
-/* =====================================
-   13. ҚОЗҒАЛЫСТЫ АЗАЙТУ
-===================================== */
+/* ==================================
+   14. ҚОЗҒАЛЫСТЫ АЗАЙТУ
+================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
     }
 
 }
